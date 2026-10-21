@@ -1,0 +1,23 @@
+[project]
+name = "contentforge-ai"
+version = "0.1.0"
+description = "LangGraph-powered blog generation API using Groq"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "langchain-groq>=0.3.0",
+    "langgraph>=0.3.0",
+    "langsmith>=0.3.0",
+    "pydantic-settings>=2.7.0",
+    "uvicorn[standard]>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.0",
+    "pytest>=8.3.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
